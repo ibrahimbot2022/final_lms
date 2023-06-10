@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Book Authors</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+ </head>
+
+ <body>
+    <div>
+    <nav class="nav_head">
+        <div class="logo"><img src="./images/logo.png"alt="company logo"></div>
+        <h1>BMSCE LIBRARY</h1>
+        <div class="right_Nav">
+                </nav>
+
+    <nav class="navbar background">
+        
+        </ul>
+        <ul class="nav_list">
+            <!-- <div class="logo"><img src="./images/icon.png"alt="company logo"></div> -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#E-resources">E-Resources</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Magzines</a></li>
+                        <li><a href="#">Journels</a></li>
+                        <li><a href="#">e-books</a></li>
+                        <li><a href="#">Video lectures</a></li>
+                    </ul>
+                  </div>
+            </li>
+            <li class="active"><a href="#dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+            <li><a href="./index.html#contact"><i class="fa fa-phone"></i>Contact us</a></li>
+         </ul>
+         
+        </div>
+        
+     </nav>
+     <div class="imageslide">
+      <img class="mySlides" src="images/Csebookslib.jpeg" style="width:100%">
+      <img class="mySlides" src="./images/civilbookdlib.jpeg" style="width:100%">
+      <img class="mySlides" src="./images/eeebookslib.jpeg" style="width:100%">
+      <img class="mySlides" src="./images/Btbookslib.jpeg" style="width:100%">
+      <img class="mySlides" src="./images/mechbookslib.jpeg" style="width:100%">
+    </div>
+    
+    <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+    <br><br>
+    
+    <h2 style="padding-left: 30px;">Search Results:</h2>
+    <div .scroll>
+    <table id="author"><br><br>
+      <tbody>
+        <tr>
+            <th>Sl.no</th>
+            <th>Name of the Book</th>
+         </tr>
+
+  <tr>
+    <td colspan="2"><b>Author: Jim Kurose</b></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Operating System</td>
+</tr>
+
+<tr>
+  <td>2</td>
+  <td>Computer Networking</td>
+</tr>
+
+
+      </tbody>
+</table>
+    </div>
+ </body>
+</html>
+   

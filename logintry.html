@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/icon.png">
+    <title>Login</title>
+
+    
+</head>
+<body onload='document.form1.text1.focus()'>
+
+    <script> 
+        
+
+      
+
+        function adminvalidate()
+        {
+            if(verifyaemail() && verifyapassword()== true){
+            //     document.location.href="./Student_Dashboard.html"
+            //     return true
+            setTimeout(function() {window.location = "./update.html" });
+
+             }
+            else {
+                return false;
+            }
+        }
+        function verifyaemail(email)
+        {
+        if(/^([A-Za-z0-9_\-\.])+\@bmsce.ac.in/.test(form2.email.value))
+        {
+          return true
+        }
+          alert("Enter valid mail id")
+          return false;
+        }
+
+        function verifyapassword(password)
+        {
+        if(form2.password.value.length<6)
+         {
+          alert('Passoword must contain 6 characters atleast');
+          return false;
+          
+         }
+		   else{
+        return true;
+       }
+}
+       
+        function validate()
+        {
+            if(verifyemail() && verifypassword()== true){
+            //     document.location.href="./Student_Dashboard.html"
+            //     return true
+            setTimeout(function() {window.location = "./Student_Dashboard.html" });
+
+             }
+            else {
+                return false;
+            }
+        }
+         function verifyemail(email)
+        {
+        if(/^([A-Za-z0-9_\-\.])+\@bmsce.ac.in/.test(form1.email.value))
+        {
+          return true
+        }
+          alert("Enter valid mail id")
+          return false;
+        }
+
+        function verifypassword(password)
+        {
+        if(form1.password.value.length<6)
+         {
+          alert('Passoword must contain 6 characters atleast');
+          return false;
+          
+         }
+		   else{
+        return true;
+       }
+}
+          </script> 
+    <div class="bg">
+      <div class="logo1"><img src="./images/icon.png"alt="company logo"></div>
+        <div class="loginbox">
+        <div class="student">
+            <h2 class ="loginheading" style="text-align:center;">Student Login</h2><br/>
+
+            <form name="form1" action="#" onsubmit="return(validate());">
+            <label class="eml">Email</label><br> 
+            <input type="email" name="email" placeholder="Enter your Email" required><br><br>
+            <label class="pwd">Password</label><br>
+            <input type="password" name="password" placeholder="Enter your Password" required><br><br>
+            <!-- <button class="loginbutton" onclick="validate(document.form1)"><a href="./Student_Dashboard.html" style="text-decoration: none;">Login</a></button> -->
+        <input type="submit" name="Login" value="Login" onclick="validate(document.form1)" > 
+       
+            <!-- <button class="loginbutton"><a href="./Student_Dashboard.html" style="text-decoration: none;">Login</a></button> -->
+            <div class="signup"><br>
+          New user? <a href="./registration.html" style="text-decoration:none;">Sign up</a></div>
+            </form>
+        </div>
+
+        <div class="admin">
+            <h2  class ="loginheading"style="text-align: center;">Admin Login</h2><br>
+
+            <form name="form2" action="#" onsubmit="return(adminvalidate());">
+            <label class="eml">Email</label><br>
+            <input type="email" name="email" placeholder="Enter your Email" required><br><br>
+            <label class="pwd">Password</label><br>
+            <input type="password" name="password" placeholder="Enter your Password" required><br><br>
+            <input type="submit" name="Login" value="Login" onclick="adminvalidate(document.form2)" >
+            <!-- <button class="loginbutton"><a href="./update.html" style="text-decoration: none;">Login</a></button> -->
+            </form>
+        </div>
+       </div>
+    </div>
+</body>
+</html>

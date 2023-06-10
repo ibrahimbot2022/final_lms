@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Returned</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/icon.png">
+   
+
+    
+
+
+    </head>
+
+    <body>
+       <div>
+       <nav class="nav_head">
+           <div class="logo"><img src="./images/icon.png"alt="company logo"></div>
+           <h1>BMSCE LIBRARY</h1>
+           <div class="right_Nav">
+               <button class="button button1">login</button> </div>
+       </nav>
+   
+       <nav class="navbar background">
+           
+           </ul>
+           <ul class="nav_list">
+               <!-- <div class="logo"><img src="./images/icon.png"alt="company logo"></div> -->
+               <li><a href="#home">Home</a></li>
+               <li><a href="#facilities">Facilities</a></li>
+               <li><a href="#E-resources">E-Resources</a>
+                   <div class="sub-menu-1">
+                       <ul>
+                           <li><a href="#">Magzines</a></li>
+                           <li><a href="#">Journels</a></li>
+                           <li><a href="#">e-books</a></li>
+                           <li><a href="#">Video lectures</a></li>
+                       </ul>
+                     </div>
+               </li>
+               <li class="active"><a href="#dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+               <li><a href="./index.html#contact"><i class="fa fa-phone"></i>Contact us</a></li>
+            </ul>
+            <!-- <input type="text" name="Search" placeholder="Search for books" id="searchbooks"> -->
+           </div>
+           
+        </nav>
+        <div class="imageslide">
+         <img class="mySlides" src="images/Csebookslib.jpeg" style="width:100%">
+         <img class="mySlides" src="./images/civilbookdlib.jpeg" style="width:100%">
+         <img class="mySlides" src="./images/eeebookslib.jpeg" style="width:100%">
+         <img class="mySlides" src="./images/Btbookslib.jpeg" style="width:100%">
+         <img class="mySlides" src="./images/mechbookslib.jpeg" style="width:100%">
+       </div>
+       
+       <script>
+       var myIndex = 0;
+       carousel();
+       
+       function carousel() {
+         var i;
+         var x = document.getElementsByClassName("mySlides");
+         for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+         }
+         myIndex++;
+         if (myIndex > x.length) {myIndex = 1}    
+         x[myIndex-1].style.display = "block";  
+         setTimeout(carousel, 2000); // Change image every 2 seconds
+       }
+       </script>
+    <br><br>
+    <div class="search"><input type="text" placeholder="Search">
+        <a href="./searchbooksreturned.html">
+            <button class="arrowbutton">></button>
+          </a></div>
+    <h2 style="text-align: center;">Books Returned</h2>
+    <table id="booksreturn"><br><br>
+        <tr>
+            <th>Sl.no</th>
+            <th>Name of the Book</th>
+            <th>Author</th>
+            <th>Date of return</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Data Structures in C</td>
+            <td>Reema Theraja</td>
+            <td>26-05-2022</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Engineering Drawing</td>
+            <td>N.D.Bhatt</td>
+            <td>30-05-2022</td>
+
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Computer Networking</td>
+            <td>Jim Kurose</td>
+            <td>10-06-2022</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Engineering Mathematics</td>
+            <td>B.S.Grewal</td>
+            <td>29-06-2022</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Advanced Microprocessors and Peripherals</td>
+            <td>A.K.Ray</td>
+            <td>04-07-2022</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Engineering Chemistry</td>
+            <td>S.S.Dara</td>
+            <td>17-07-2022</td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Engineering Physics</td>
+            <td>S Chand</td>
+            <td>25-07-2022</td>
+        </tr>
+    </table>
+ <br/>
+ <div class="foot"> 
+    <footer>
+      <ul class="social_icons">
+          <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="https://www.instagram.com/bmsce_25/?hl=en" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="https://twitter.com/i/flow/login" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="https://in.linkedin.com/school/b.-m.-s.-college-of-engineering/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-flickr"></ion-icon></a></li>
+      </ul>
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html#top">About</a></li>
+        <li><a href="./facilities.html">Services</a></li>
+        <li><a href="./team.html">Team</a></li>
+        <li><a href="./index.html#contact">Contact</a></li>
+    </ul>
+
+      <p>
+          © 2023 BMSCE LIBRARY 
+      </p>
+      </footer>
+   </div>
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</body>
+</html>

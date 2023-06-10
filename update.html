@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/icon.png">
+   
+ </head>
+
+ <body>
+    <nav class="nav_head">
+        <div class="logo"><img src="./images/icon.png"alt="company logo"></div>
+        <h1>BMSCE LIBRARY</h1>
+        <div class="right_Nav">
+            
+    </nav>
+
+    <nav class="navbar background">
+        
+        </ul>
+        <ul class="nav_list">
+            <!-- <div class="logo"><img src="./images/icon.png"alt="company logo"></div> -->
+            
+            <li ><a href="http://127.0.0.1:5501/index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li ><a href="./facilities.html">Facilities</a>
+                    
+            <li><a href="./e-resouces.html">E-Resources</a>
+                
+            </li>
+            <li class="active"><a href="#dashboard"><i class="fa fa-home"></i>Dashboard</a></li>
+            <li><a href="./index.html#contact"><i class="fa fa-phone"></i>Contact us</a></li>
+         </ul>
+     </nav>
+     
+
+     
+     
+     <div class="row background_h">
+        
+                <div class="leftsection " >
+                    
+                    <ul>
+                        <div class="sidebar">
+                            <a href="#update" class="active" style="color: black;"><i class="active"></i> Update</a>
+                            <a href="http://127.0.0.1:5501/add.html" ><i class="fa fa-fw fa-wrench"></i> Add</a>
+                            <a href="http://127.0.0.1:5501/delete.html" ><i class="fa fa-fw fa-user"></i> Delete</a>
+                            <a href="http://127.0.0.1:5501/issue.html" ><i class="fa fa-fw fa-envelope"></i> Issue</a>
+                            <a href="http://127.0.0.1:5501/return.html"><i class="fa fa-fw fa-envelope"></i>Return</a>
+                          </div>
+                        
+                        
+                    </ul>
+                 </div> 
+                 <div class="reg">
+                    <h1 style="font-size: 27px;">UPDATE BOOK DETAILS</h1>
+                    <br/>
+                    <form name="form1" action="#" onsubmit="return(myfunction());">
+                        <label style="color: black">Book no
+                            <select name="branches">
+                            <option value="none">none</option>   
+                            <option value = "CSE">CS1099</option>
+                            <option value = "CSE">CS1091</option>
+                            <option value = "CSE">CS1564</option>
+                            <option value = "CSE">CS1673</option>
+                            <option value = "ISE">IS2776</option>
+                            <option value = "ISE">IS2352</option>
+                            <option value = "ISE">IS2275</option>
+                            <option value = "ISE">IS2972</option>
+                            <option value = "aiml">AIML9287</option>
+                            <option value = "aiml">AIML9029</option>
+                            <option value = "aiml">AIML9446</option>
+                            <option value = "aiml">AIML9777</option>
+                            <option value = "E.COMM.">EC8222</option>
+                            <option value = "E.COMM.">EC8776</option>
+                            <option value = "E.COMM.">EC8979</option>
+                            <option value = "E.COMM.">EC8977</option>
+                            <option value = "MECHANICAL">ME5646</option>
+                            <option value = "MECHANICAL">ME5232</option>
+                            <option value = "MECHANICAL">ME5555</option>
+                            <option value = "MECHANICAL">MC5111</option>
+                            
+                            </select></label>
+                  
+                      <label for="lname">Author</label>
+                      <input type="text" id="aname" name="aname" placeholder="enter author name.." ><br/>
+                  
+                      <label for="lname">Book Name</label>
+                      <input type="text" id="bname" name="bname" placeholder="enter book name .." >
+                      
+                      <br/>
+                      
+                          
+                      
+                      <br/>
+                      
+                     
+                
+                    
+                    
+        
+        
+                      <input id="check" type="submit" value="UPDATE" onclick="myfunction(document.form1)"  >
+                      
+                      <!-- <script>
+
+                       
+                        function myfunction(aname,bname,pname){
+                            
+                            if(form1.aname.value.length!=0 || form1.bname.value.length!=0 || form1.pname.value.length!=0)
+                            {
+                                alert("Book updated successfully");
+                                // setTimeout(function() {window.location = "./update.html" });
+
+                             return true;
+
+                            }
+                            else{
+                            
+                            alert("Enter all fields")
+                             return false;
+                            }
+                            
+                        }
+                      </script> -->
+                      <script>
+
+                     
+                        
+                        
+                    
+                        function verifyaname(aname)
+                        {
+                        if(/^[a-zA-Z ]*$/.test(form1.aname.value))
+                        {
+                            return true;
+                        }
+                        else{
+                            alert("Enter valid Author name");
+                            return false;
+                        }
+                    }
+                        
+                        function verifybname(bname)
+                        {
+                        if(/^[a-zA-Z ]*$/.test(form1.bname.value))
+                        {
+                            return true;
+                        }
+                        else{
+                            alert("Enter valid Book name");
+                            return false;
+                        }
+                    }
+
+                        function myfunction()
+                    {
+                        if( verifyaname()==true && verifybname()== true)
+                        {
+                        alert("Book updated succesfully");
+                        return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    }
+                
+                      
+                      </script>
+                    </form>
+                  </div>
+                  <!-- <script>
+//                   function required()
+// {
+// var empt = document.forms["form1"]["text1"].value;
+// if (empt == "")
+// {
+// alert("Please input a Value");
+// return false;
+// }
+// else 
+// {
+// alert('Code has accepted : you can try another');
+// return true; 
+// }
+// }
+// </script>  -->
+             </div>       
+                   
+           
+          <footer>
+            <ul class="social_icons">
+                <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/bmsce_25/?hl=en" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://twitter.com/i/flow/login" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://in.linkedin.com/school/b.-m.-s.-college-of-engineering/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-flickr"></ion-icon></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#top">About</a></li>
+                <li><a href="./facilities.html">Services</a></li>
+                <li><a href="./team.html">Team</a></li>
+                <li><a href="./index.html#contact">Contact</a></li>
+            </ul>
+
+            <p>
+                © 2023 BMSCE LIBRARY 
+            </p>
+            </footer>
+            <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html> 
